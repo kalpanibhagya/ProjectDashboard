@@ -20,5 +20,6 @@ namespace ProDashBoard.Model.Repository
         string getEmailUri();
         string getEmailDomain();
         string getEmailBodyLink();
+        int getBurningQuestionNo();
     }
 }

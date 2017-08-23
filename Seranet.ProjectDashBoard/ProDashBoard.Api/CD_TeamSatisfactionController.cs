@@ -41,5 +41,28 @@ namespace ProDashBoard.Api
             int returnData = repo.getCompletion(Year, Quarter);
             return Request.CreateResponse(HttpStatusCode.OK, returnData);
         }
+        //Getting User results
+        [HttpGet, Route("api/CD_TeamSatisfactionController/getUserTeamSatisfaction/{Year}/{Quarter}")]
+        public HttpResponseMessage getUserTeamSatisfaction(int Year, int Quarter)
+        {
+            List<UserTeamSatisfaction> returnData = repo.GetUserTeamSatisfaction(Year, Quarter);
+            return Request.CreateResponse(HttpStatusCode.OK, returnData);
+        }
+
+        //Getting User results
+        [HttpGet, Route("api/CD_TeamSatisfactionController/getAccounts")]
+        public HttpResponseMessage getAccounts()
+        {
+            List<Account> returnData = repo.GetAccounts();
+            return Request.CreateResponse(HttpStatusCode.OK, returnData);
+        }
+
+        //Getting Burning Questions
+        [HttpGet, Route("api/CD_TeamSatisfactionController/getBurningQuestions/{Year}/{Quarter}")]
+        public HttpResponseMessage getBurningQuestions(int Year, int Quarter)
+        {
+            List<UserTeamSatisfaction> returnData = repo.GetBurningIssues(Year,Quarter);
+            return Request.CreateResponse(HttpStatusCode.OK, returnData);
+        }
     }
 }

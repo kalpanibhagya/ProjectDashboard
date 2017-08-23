@@ -159,8 +159,8 @@
                                 </div>
                                 <table id="Satisfaction Trends" style="width:100%;">
                                     <tr></tr>
-                                    <tr data-ng-repeat="project in TeamSatisfactionProjects" style="border-bottom: 1px solid #ccc;">
-                                        <td style="padding-left:15px;width:60%">{{project.Name}}</td>
+                                    <tr  data-ng-repeat="project in TeamSatisfactionProjects" data-ng-click="openTeamlink(project)" style="border-bottom: 1px solid #ccc;cursor:pointer;">
+                                        <td  style="padding-left:15px;width:60%">{{project.Name}}</td>
                                         <td style="padding-left:20px">{{project.Rating}}</td>
                                     </tr>
 
@@ -169,9 +169,9 @@
                             </div>
                         </div>
 
-                        <a style="padding-left:30px;cursor:pointer;padding-top:5px">{{TeamCompletion}} user(s) completed for {{chartTime}} </a>
+                        <a style="padding-left:30px;cursor:pointer;padding-top:5px" data-ng-click="open()">{{TeamCompletion}} user(s) completed for {{chartTime}} </a>
                         <br />
-                        <a style="padding-left:30px;cursor:pointer;padding-top:5px">{{BurningIssues}} Burnning Issue(s)</a>
+                        <a style="padding-left:30px;cursor:pointer;padding-top:5px" data-ng-click="openburning()">{{BurningIssues}} Burnning Issue(s)</a>
                     </div>
                 </div>
             </div>
@@ -316,7 +316,7 @@
                                 </table>
                             </div>
                         </div>
-                        <a style="padding-left:20px;cursor:pointer;margin-top:15px">{{CustomerCompletion}} Project(s) completed for {{CustomerchartTime}} </a>
+                        <span style="padding-left:20px;cursor:default;margin-top:15px">{{CustomerCompletion}} Project(s) completed for {{CustomerchartTime}} </span>
                     </div>
                 </div>
             </div>
@@ -450,7 +450,7 @@
                                     </div>
 
                                 </div>
-                                <a style="cursor:pointer;margin-top:15px">{{Completion}} Project(s) completed for {{ShowingHalf}} </a>
+                                <span style="cursor:default;margin-top:15px">{{Completion}} Project(s) completed for {{ShowingHalf}} </span>
                             </div>
                         </div>
                     </div>
@@ -623,7 +623,7 @@
 
                             </div>
                             <div style="padding-left:30px">
-                                <a style="cursor:pointer;margin-top:15px;">{{Completion}} Project(s) completed for {{ShowingHalf}} </a>
+                                <span style="cursor:default;margin-top:15px;">{{Completion}} Project(s) completed for {{ShowingHalf}} </span>
                             </div>
                             </div>
                         </div>

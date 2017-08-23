@@ -2,12 +2,12 @@
     'use strict';
     //create angularjs controller
 
-    app.controller('CDBController', ['$scope', 'toaster', '$mdDialog', '$rootScope', '$http', '$window', '$timeout', CDBController]);
+    app.controller('CDBController', ['$scope', 'toaster', '$mdDialog', '$rootScope', '$http', '$window', '$timeout', '$modal', CDBController]);
 
     //angularjs controller method
 
 
-    function CDBController($scope, toaster, $mdDialog, $rootScope, $http, $window, $timeout) {
+    function CDBController($scope, toaster, $mdDialog, $rootScope, $http, $window, $timeout, $modal) {
 
         isAuthorized();
         
@@ -54,7 +54,9 @@
                 var Rating = ChartObject.Rating;
                 var TeamSatisficationScore = parseFloat(Rating);
                 var TScore = 10 - TeamSatisficationScore;
-
+                loadPopUpCompletedData();
+                loadAccounts();
+                loadIssues();
                 if ($scope.selectedSummary.length > 5) {
                     $scope.selectedSummary.pop();
                     $scope.TeamShowMore = true;
@@ -114,6 +116,85 @@
             $scope.Projects = true;
         }
 
+        //popup for completed
+        $scope.open = function () {
+            var modalInstance = $modal.open({
+                templateUrl: 'app/CooperateDashboard/CompletedUsersPopup.html',
+                controller: 'CompletedUsersPopupCtrl',
+                resolve: {
+                   
+                    Year: function () {
+                        return $scope.chartTime;
+                    },
+                    TeamData: function(){
+                        return $scope.UserSatisfactionData;
+                    },
+                    Accounts: function () {
+                        return $scope.Accounts;
+                    }
+                }
+            });
+
+        }
+        function loadPopUpCompletedData() {
+            $http.get(' api/CD_TeamSatisfactionController/getUserTeamSatisfaction/' + $scope.TeamYear + '/' + $scope.TeamQuarter).success(function (data) {
+               // console.log(data);
+                $scope.UserSatisfactionData = data;
+            }).error(function () {
+                console.log("ERRORRRR");
+                $scope.error = "An Error has occured while loading posts!";
+            })
+       
+        }
+
+        function loadAccounts() {
+            $http.get('api/CD_TeamSatisfactionController/getAccounts').success(function (data) {
+                $scope.Accounts = [];
+                data.forEach(function (project) {
+                    $scope.Accounts.push(project.AccountName);
+                })
+                $scope.Accounts.unshift("All Accounts");
+            }).error(function () {
+                console.log("ERRORRRR");
+                $scope.error = "An Error has occured while loading posts!";
+            })
+
+        }
+
+        $scope.openTeamlink = function (no) {
+            window.location.replace("#/teamSatisfaction/"+no.projectID);
+
+        }
+        //popup for burning issues
+        $scope.openburning = function () {
+            var modalInstance = $modal.open({
+                templateUrl: 'app/CooperateDashboard/BurningIssuesPopup.html',
+                controller: 'BurningIssuesPopupCtrl',
+                resolve: {
+
+                    Year: function () {
+                        return $scope.chartTime;
+                    },
+                    TeamData: function () {
+                        return $scope.BurningIssuesData;
+                    },
+                    Accounts: function () {
+                        return $scope.Accounts;
+                    }
+                }
+            });
+
+        }
+        function loadIssues() {
+            $http.get(' api/CD_TeamSatisfactionController/getBurningQuestions/' + $scope.TeamYear + '/' + $scope.TeamQuarter).success(function (data) {
+                // console.log(data);
+                $scope.BurningIssuesData = data;
+            }).error(function () {
+                console.log("ERRORRRR");
+                $scope.error = "An Error has occured while loading posts!";
+            })
+
+        }
         //Chart Customer
         function CustomerSatisfactionData() {
             $http.get('api/CD_CustomerSatisfactionController/get').success(function (data) {

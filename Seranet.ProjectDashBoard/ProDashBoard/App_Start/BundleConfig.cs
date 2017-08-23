@@ -84,7 +84,9 @@ namespace ProDashBoard
                     "~/app/AuthHandler/AuthController.js",
                     "~/app/CooperateDashboard/ComplienceController.js",
                     "~/app/CooperateDashboard/RiskController.js",
-                    "~/app/CooperateDashboard/NPSController.js"
+                    "~/app/CooperateDashboard/NPSController.js",
+                    "~/app/CooperateDashboard/CompletedUsersPopupCtrl.js",
+                    "~/app/CooperateDashboard/BurningIssuesPopupCtrl.js"
                     ));
 
         }

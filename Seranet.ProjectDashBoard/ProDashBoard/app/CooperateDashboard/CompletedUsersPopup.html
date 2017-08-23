@@ -1,0 +1,47 @@
+﻿<div style="font-family:Roboto;padding:5px;" aria-hidden="false" class="modal-content1 modal-open">
+    <div class="modal-body modal-header">
+        <button type="button" class="close" data-ng-click="close()" aria-hidden="true">×</button>
+
+        <h3 class="modal-title">{{Time}} Responses</h3>
+        
+    </div>
+
+    <div class="modal-body">
+        <div  style="padding-left:50px">
+            <div class="row" style="display:inline">
+                
+                <div class="col-md-11">
+                    <select class="myList"
+                            data-ng-model="SelectedProject"
+                            data-ng-change="change(SelectedProject)"
+                            data-ng-options="project for project in Accounts"
+                            ng-init="SelectedProject=SelctProj"></select>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="scrollbar" id="style-2" style="overflow:scroll; height:500px; overflow-x: hidden;overflow-y:auto" >
+                <table id="projects" style="width:100%;">
+                    <tr style="border-bottom: 1px solid #ccc;">
+                        <th style="padding-left:20px">User</th>
+                        <th>Account</th>
+                        <th>Rating</th>
+                        
+                    </tr>
+                    <tr data-ng-repeat="project in TeamData" style="border-bottom: 1px solid #ccc;">
+                        <td style="padding-left:15px">{{project.Name}}</td>
+                        <td style="padding-left:10px">{{project.Account}}</td>
+                        <td style="padding-left:15px">{{project.Rating}}</td>
+                        
+                    </tr>
+                </table>
+                
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-secondary" data-ng-click="close()">
+            Close
+        </button>
+        <!--<button class="btn btn-warning" type="button" data-ng-click="close()">Close</button>-->
+    </div>
+</div>

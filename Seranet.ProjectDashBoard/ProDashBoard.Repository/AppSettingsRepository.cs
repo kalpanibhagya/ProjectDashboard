@@ -274,5 +274,24 @@ namespace ProDashBoard.Data
             return customSetting.Value;
         }
 
+        public int getBurningQuestionNo()
+        {
+            KeyValueConfigurationElement customSetting = null;
+            if (rootWebConfig.AppSettings.Settings.Count > 0)
+            {
+                customSetting =
+                    rootWebConfig.AppSettings.Settings["BurningquestionNo"];
+                if (customSetting != null)
+                {
+                    Debug.WriteLine("BurningquestionNo " + customSetting.Value);
+
+                }
+                else
+                    Debug.WriteLine("No BurningquestionNo application string");
+            }
+
+
+            return Int32.Parse(customSetting.Value);
+        }
     }
 }

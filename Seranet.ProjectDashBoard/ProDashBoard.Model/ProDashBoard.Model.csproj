@@ -163,6 +163,7 @@
     <Compile Include="TeamMembers.cs" />
     <Compile Include="TeamSatisfactionEmployeeSummary.cs" />
     <Compile Include="FinancialResults.cs" />
+    <Compile Include="UserTeamSatisfaction.cs" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

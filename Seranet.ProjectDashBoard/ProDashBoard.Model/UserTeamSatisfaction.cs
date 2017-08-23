@@ -5,14 +5,13 @@ using System.Web;
 
 namespace ProDashBoard.Model
 {
-    public class CD_ProjectSatisfactionData
+    public class UserTeamSatisfaction
     {
         public String Name { get; set; }
-
         public decimal Rating { get; set; }
+        public string Account { get; set; }
 
-        public string Answer { get; set; }
+        public string Comment { get; set; }
 
-        public int projectID { get; set; }
     }
 }

@@ -343,8 +343,12 @@
     <Content Include="app\app.js" />
     <Content Include="app\AuthHandler\AuthController.html" />
     <Content Include="app\AuthHandler\AuthController.js" />
+    <Content Include="app\CooperateDashboard\BurningIssuesPopup.html" />
+    <Content Include="app\CooperateDashboard\BurningIssuesPopupCtrl.js" />
     <Content Include="app\CooperateDashboard\coHome.html" />
     <Content Include="app\CooperateDashboard\coHomeController.js" />
+    <Content Include="app\CooperateDashboard\CompletedUsersPopup.html" />
+    <Content Include="app\CooperateDashboard\CompletedUsersPopupCtrl.js" />
     <Content Include="app\CooperateDashboard\ComplienceController.js" />
     <Content Include="app\CooperateDashboard\NPSController.js" />
     <Content Include="app\CooperateDashboard\RiskController.js" />
@@ -1449,7 +1453,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config">
-     <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
