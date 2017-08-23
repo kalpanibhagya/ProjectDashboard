@@ -87,12 +87,17 @@ namespace ProDashBoard.Data
             return customSetting.Value;
         }
 
+<<<<<<< HEAD
         public bool getCorporateDashboard()
+=======
+        public string getEmailUserName()
+>>>>>>> master
         {
             KeyValueConfigurationElement customSetting = null;
             if (rootWebConfig.AppSettings.Settings.Count > 0)
             {
                 customSetting =
+<<<<<<< HEAD
                     rootWebConfig.AppSettings.Settings["CorporateDashboard"];
 
                 if (customSetting != null)
@@ -125,11 +130,27 @@ namespace ProDashBoard.Data
         }
 
         public string getRiskLink()
+=======
+                    rootWebConfig.AppSettings.Settings["emailUserName"];
+                if (customSetting != null)
+                {
+                    Debug.WriteLine("emailUserName " + customSetting.Value);
+
+                }
+                else
+                    Debug.WriteLine("No emailUserName string");
+            }
+            return customSetting.Value;
+        }
+
+        public string getEmailPassword()
+>>>>>>> master
         {
             KeyValueConfigurationElement customSetting = null;
             if (rootWebConfig.AppSettings.Settings.Count > 0)
             {
                 customSetting =
+<<<<<<< HEAD
                     rootWebConfig.AppSettings.Settings["riskLink"];
                 if (customSetting != null)
                 {
@@ -145,11 +166,27 @@ namespace ProDashBoard.Data
         }
 
         public string getRiskURL()
+=======
+                    rootWebConfig.AppSettings.Settings["emailPassword"];
+                if (customSetting != null)
+                {
+                    Debug.WriteLine("emailPassword " + customSetting.Value);
+
+                }
+                else
+                    Debug.WriteLine("No emailPassword string");
+            }
+            return customSetting.Value;
+        }
+
+        public string getEmailDomain()
+>>>>>>> master
         {
             KeyValueConfigurationElement customSetting = null;
             if (rootWebConfig.AppSettings.Settings.Count > 0)
             {
                 customSetting =
+<<<<<<< HEAD
                     rootWebConfig.AppSettings.Settings["riskDashboard"];
                 if (customSetting != null)
                 {
@@ -165,67 +202,7 @@ namespace ProDashBoard.Data
         }
 
         public int getNPSQuestionNo()
-        {
-            KeyValueConfigurationElement customSetting = null;
-            if (rootWebConfig.AppSettings.Settings.Count > 0)
-            {
-                customSetting =
-                    rootWebConfig.AppSettings.Settings["NPSquestionNo"];
-                if (customSetting != null)
-                {
-                    Debug.WriteLine("NPSquestionNo " + customSetting.Value);
-
-                }
-                else
-                    Debug.WriteLine("No NPSquestionNo application string");
-            }
-
-
-            return Int32.Parse(customSetting.Value);
-        }
-
-        public string getEmailUserName()
-        {
-            KeyValueConfigurationElement customSetting = null;
-            if (rootWebConfig.AppSettings.Settings.Count > 0)
-            {
-                customSetting =
-                    rootWebConfig.AppSettings.Settings["emailUserName"];
-                if (customSetting != null)
-                {
-                    Debug.WriteLine("emailUserName " + customSetting.Value);
-
-                }
-                else
-                    Debug.WriteLine("No emailUserName string");
-            }
-            return customSetting.Value;
-        }
-
-        public string getEmailPassword()
-        {
-            KeyValueConfigurationElement customSetting = null;
-            if (rootWebConfig.AppSettings.Settings.Count > 0)
-            {
-                customSetting =
-                    rootWebConfig.AppSettings.Settings["emailPassword"];
-                if (customSetting != null)
-                {
-                    Debug.WriteLine("emailPassword " + customSetting.Value);
-
-                }
-                else
-                    Debug.WriteLine("No emailPassword string");
-            }
-            return customSetting.Value;
-        }
-
-        public string getEmailDomain()
-        {
-            KeyValueConfigurationElement customSetting = null;
-            if (rootWebConfig.AppSettings.Settings.Count > 0)
-            {
-                customSetting =
+=======
                     rootWebConfig.AppSettings.Settings["emailDomain"];
                 if (customSetting != null)
                 {
@@ -239,11 +216,27 @@ namespace ProDashBoard.Data
         }
 
         public string getEmailUri()
+>>>>>>> master
         {
             KeyValueConfigurationElement customSetting = null;
             if (rootWebConfig.AppSettings.Settings.Count > 0)
             {
                 customSetting =
+<<<<<<< HEAD
+                    rootWebConfig.AppSettings.Settings["NPSquestionNo"];
+                if (customSetting != null)
+                {
+                    Debug.WriteLine("NPSquestionNo " + customSetting.Value);
+
+                }
+                else
+                    Debug.WriteLine("No NPSquestionNo application string");
+            }
+
+
+            return Int32.Parse(customSetting.Value);
+        }
+=======
                     rootWebConfig.AppSettings.Settings["emailUri"];
                 if (customSetting != null)
                 {
@@ -274,5 +267,6 @@ namespace ProDashBoard.Data
             return customSetting.Value;
         }
 
+>>>>>>> master
     }
 }

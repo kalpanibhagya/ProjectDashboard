@@ -11,14 +11,17 @@ namespace ProDashBoard.Model.Repository
         string getThreshold();
         string getSpecLink();
         string getProcessComplianceLink();
+<<<<<<< HEAD
         bool getCorporateDashboard();
         string getRiskLink();
         string getRiskURL();
         int getNPSQuestionNo();
+=======
         string getEmailUserName();
         string getEmailPassword();
         string getEmailUri();
         string getEmailDomain();
         string getEmailBodyLink();
+>>>>>>> master
     }
 }

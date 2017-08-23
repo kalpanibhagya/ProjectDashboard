@@ -339,7 +339,10 @@
     <Content Include="app\adminPanel\adminProjectCtrl.js" />
     <Content Include="app\adminPanel\AdminSettings.html" />
     <Content Include="app\adminPanel\adminAccountCtrl.js" />
+<<<<<<< HEAD
+=======
     <Content Include="app\adminPanel\AccountPopUpCtrl.js" />
+>>>>>>> master
     <Content Include="app\app.js" />
     <Content Include="app\AuthHandler\AuthController.html" />
     <Content Include="app\AuthHandler\AuthController.js" />
@@ -569,8 +572,11 @@
     <Content Include="fonts\Roboto\Roboto-Regular.ttf" />
     <Content Include="fonts\Roboto\Roboto-Thin.ttf" />
     <Content Include="fonts\Roboto\Roboto-ThinItalic.ttf" />
+<<<<<<< HEAD
     <Content Include="ClassDiagram1.cd" />
+=======
     <Content Include="Content\angular-block-ui.css.map" />
+>>>>>>> master
     <None Include="Properties\PublishProfiles\NewProDashboard.pubxml" />
     <None Include="Properties\PublishProfiles\testifier.pubxml">
       <SubType>Designer</SubType>
@@ -1449,9 +1455,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config">
-     <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
     </Content>
-    <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
