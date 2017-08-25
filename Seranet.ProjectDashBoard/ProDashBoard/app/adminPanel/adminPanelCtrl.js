@@ -56,17 +56,17 @@
     }
 
       function isAdminOrTeamLead() {
-            //api/Authorization/getAdminOrTeamLeadRights/{accountId}
-            $http.get("api/Authorization/getAdminOrTeamLeadRights/1").success(function (data) {
-                $scope.isAdmin = data.split('-')[0].toLowerCase() == 'true';
-                $scope.isTeamLead = data.split('-')[1].toLowerCase() == 'true';
-                if(!$scope.isAdmin && !$scope.isTeamLead){
-                $window.location.href = '#/error';
-                }
-            })
-            .error(function () {
+        //api/Authorization/getAdminOrTeamLeadRights/{accountId}
+        $http.get("api/Authorization/getAdminOrTeamLeadRights/1").success(function (data) {
+          $scope.isAdmin = data.split('-')[0].toLowerCase() == 'true';
+          $scope.isTeamLead = data.split('-')[1].toLowerCase() == 'true';
+          if(!$scope.isAdmin && !$scope.isTeamLead){
+          $window.location.href = '#/error';
+          }
+        })
+        .error(function () {
 
-            });
+        });
         }
 
     function getLoggedUser() {
@@ -83,15 +83,15 @@
     function EmployeesInitializer() {
 
       $http.get('http://99xt.lk/services/api/Employees', { withCredentials: true }).
-                  success(function (data, status, headers, config) {
-                    angular.forEach(data, function (value, key) {
-                      $scope.employeeNames.push(value.id);
-                    });
-                    addEmployees();
-                  })
-          .error(function (data, status, headers, config) {
-            console.log(data);
+        success(function (data, status, headers, config) {
+          angular.forEach(data, function (value, key) {
+            $scope.employeeNames.push(value.id);
           });
+          addEmployees();
+      })
+      .error(function (data, status, headers, config) {
+        console.log(data);
+      });
 
     }
 
@@ -99,17 +99,17 @@
     function AccountsInitializer() {
 
       $http.get('http://99xt.lk/services/api/Projects', { withCredentials: true }).
-                  success(function (data, status, headers, config) {
+        success(function (data, status, headers, config) {
 
-                    angular.forEach(data, function (value, key) {
-                      $scope.accountData = $scope.accountData + "~" + value.assignment + ":" + value.name + ":" + value.rep;
+          angular.forEach(data, function (value, key) {
+            $scope.accountData = $scope.accountData + "~" + value.assignment + ":" + value.name + ":" + value.rep;
 
-                    });
-                    addAccount();
-                  }).
-                  error(function (data, status, headers, config) {
-                    console.log(data);
-                  });
+          });
+          addAccount();
+        }).
+        error(function (data, status, headers, config) {
+          console.log(data);
+        });
 
       //$http({ headers: { "Accept": "application/json; odata=verbose" }, method: 'GET', url: "https://99xtech.sharepoint.com/departments/Delivery_stage/Project_Test2/_api/web/lists/getByTitle('Risk List')/Items" })
 
@@ -179,9 +179,3 @@
 
 
 })();
-
-
-
-
-
-
