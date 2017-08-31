@@ -11,32 +11,32 @@ using System.Net.Http.Formatting;
 
 namespace ProDashBoard
 {
-    public static class WebApiConfig
+  public static class WebApiConfig
+  {
+    public static void Register(HttpConfiguration config)
     {
-        public static void Register(HttpConfiguration config)
-        {
-            // Web API configuration and services
-            // Configure Web API to use only bearer token authentication.
+      // Web API configuration and services
+      // Configure Web API to use only bearer token authentication.
 
 
-            //config.SuppressDefaultHostAuthentication();
-            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+      //config.SuppressDefaultHostAuthentication();
+      //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
 
-            //config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+      //config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
 
-            //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
-            // Web API routes
-            //config.Formatters.Clear();
-            //config.Formatters.Add(new JsonMediaTypeFormatter());
-            config.MapHttpAttributeRoutes();
+      //config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
+      // Web API routes
+      //config.Formatters.Clear();
+      //config.Formatters.Add(new JsonMediaTypeFormatter());
+      config.MapHttpAttributeRoutes();
 
-            //var cors = new EnableCorsAttribute("http://99xt.lk/spec/security/username", "*", "*");
-            //config.EnableCors();
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
-        }
+      //var cors = new EnableCorsAttribute("http://99xt.lk/spec/security/username", "*", "*");
+      //config.EnableCors();
+      config.Routes.MapHttpRoute(
+        name: "DefaultApi",
+        routeTemplate: "api/{controller}/{id}",
+        defaults: new { id = RouteParameter.Optional }
+      );
     }
+  }
 }
