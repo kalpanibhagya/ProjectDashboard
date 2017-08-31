@@ -107,10 +107,10 @@
 
 
       })
-  .error(function () {
-    $scope.error = "An Error has occured while loading posts!";
+      .error(function () {
+        $scope.error = "An Error has occured while loading posts!";
 
-  });
+      });
     }
 
 
@@ -168,11 +168,11 @@
         toaster.pop('success', "Notificaton", "survey details saved successfully");
         $window.location.href = '#/';
       })
-            .error(function (error) {
-              toaster.pop('warning', "Notificaton", error);
-              $scope.error = "an error has occured while loading posts!";
+      .error(function (error) {
+        toaster.pop('warning', "Notificaton", error);
+        $scope.error = "an error has occured while loading posts!";
 
-            });
+      });
 
     }
 
@@ -187,10 +187,10 @@
 
 
       })
-  .error(function () {
-    $scope.error = "An Error has occured while loading posts!";
+      .error(function () {
+        $scope.error = "An Error has occured while loading posts!";
 
-  });
+      });
     }
 
 
@@ -208,10 +208,10 @@
         }
 
       })
-  .error(function () {
-    $scope.error = "An Error has occured while loading posts!";
+      .error(function () {
+        $scope.error = "An Error has occured while loading posts!";
 
-  });
+      });
     }
   }
 })();
