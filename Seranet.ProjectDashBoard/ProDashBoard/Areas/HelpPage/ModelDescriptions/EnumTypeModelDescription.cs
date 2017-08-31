@@ -3,13 +3,13 @@ using System.Collections.ObjectModel;
 
 namespace ProDashBoard.Areas.HelpPage.ModelDescriptions
 {
-    public class EnumTypeModelDescription : ModelDescription
+  public class EnumTypeModelDescription : ModelDescription
+  {
+    public EnumTypeModelDescription()
     {
-        public EnumTypeModelDescription()
-        {
-            Values = new Collection<EnumValueDescription>();
-        }
-
-        public Collection<EnumValueDescription> Values { get; private set; }
+      Values = new Collection<EnumValueDescription>();
     }
+
+    public Collection<EnumValueDescription> Values { get; private set; }
+  }
 }
