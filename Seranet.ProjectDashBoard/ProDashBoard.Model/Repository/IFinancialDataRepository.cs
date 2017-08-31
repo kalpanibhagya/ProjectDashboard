@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-   public interface IFinancialDataRepository
-    {
-        FinancialFinalData getDataFromTimeReports(int year, int month, int accountId);
-    }
+  public interface IFinancialDataRepository
+  {
+    FinancialFinalData getDataFromTimeReports(int year, int month, int accountId);
+  }
 }
 

@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IProcessComplianceResultsRepository
-    {
-        List<ProcessComplianceResults> getSelectedProjectResults(int AccountId, int ProjectId, int year, int quarter);
-        int add(ProcessComplianceResults results);
-    }
+  public interface IProcessComplianceResultsRepository
+  {
+    List<ProcessComplianceResults> getSelectedProjectResults(int AccountId, int ProjectId, int year, int quarter);
+    int add(ProcessComplianceResults results);
+  }
 }

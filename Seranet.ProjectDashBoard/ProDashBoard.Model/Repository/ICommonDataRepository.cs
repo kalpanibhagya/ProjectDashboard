@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface ICommonDataRepository
-    {
-       CommonData getSelectedProjectCommonData(int projectid);
-        int update(CommonData commonData);
-        int add(CommonData commonData);
-    }
+  public interface ICommonDataRepository
+  {
+    CommonData getSelectedProjectCommonData(int projectid);
+    int update(CommonData commonData);
+    int add(CommonData commonData);
+  }
 }

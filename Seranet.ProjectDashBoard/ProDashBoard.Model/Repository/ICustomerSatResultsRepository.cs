@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface ICustomerSatResultsRepository
-    {
-        List<CustomerSatisfactionResults> getSelectedCustomerSatResults(int accountId,int projectId,int year,int quarter);
-    }
+  public interface ICustomerSatResultsRepository
+  {
+    List<CustomerSatisfactionResults> getSelectedCustomerSatResults(int accountId,int projectId,int year,int quarter);
+  }
 }

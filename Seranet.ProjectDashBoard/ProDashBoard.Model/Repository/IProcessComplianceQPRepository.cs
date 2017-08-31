@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IProcessComplianceQPRepository
-    {
-        List<ProcessComplianceQualityParameters> get();
-    }
+  public interface IProcessComplianceQPRepository
+  {
+    List<ProcessComplianceQualityParameters> get();
+  }
 }

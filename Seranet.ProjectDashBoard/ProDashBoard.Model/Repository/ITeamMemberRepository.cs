@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-   public interface ITeamMemberRepository
-    {
+  public interface ITeamMemberRepository
+  {
 
-        List<TeamMembers> Get();
+    List<TeamMembers> Get();
 
-        List<TeamMembers> getActiveTeamMembers();
-        TeamMembers Get(int id);
-        TeamMembers getSelectedEmployee(string username);
-        int add(TeamMembers teamMembers);
-    }
+    List<TeamMembers> getActiveTeamMembers();
+    TeamMembers Get(int id);
+    TeamMembers getSelectedEmployee(string username);
+    int add(TeamMembers teamMembers);
+  }
 }

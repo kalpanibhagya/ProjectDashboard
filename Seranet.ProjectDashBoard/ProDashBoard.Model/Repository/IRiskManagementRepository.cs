@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IRiskManagementRepository
-    {
-        List<RiskData> getTotalRisksForSelectAccountSubProjects(List<Project> subProjects);
-    }
+  public interface IRiskManagementRepository
+  {
+    List<RiskData> getTotalRisksForSelectAccountSubProjects(List<Project> subProjects);
+  }
 }

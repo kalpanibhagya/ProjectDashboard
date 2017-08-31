@@ -7,24 +7,24 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IProjectRepository
-    {
-        List<Project> Get();
-        Project Get(int id);
-        List<Project> getInactiveProjects();
+  public interface IProjectRepository
+  {
+    List<Project> Get();
+    Project Get(int id);
+    List<Project> getInactiveProjects();
 
-        Spec GetSpec(int projectid);
+    Spec GetSpec(int projectid);
 
-        List<Project> getSelectedAccountProjects(int accountId);
+    List<Project> getSelectedAccountProjects(int accountId);
 
-        List<ProjectData> getProjectData();
-        List<Project> getSelectedAdminAccountProjects(int accountId);
+    List<ProjectData> getProjectData();
+    List<Project> getSelectedAdminAccountProjects(int accountId);
 
-        int add(string projectName,int accountId);
+    int add(string projectName,int accountId);
 
-        int update(Project project);
-        int updateFullProject(Project project);
+    int update(Project project);
+    int updateFullProject(Project project);
 
 
-    }
+  }
 }

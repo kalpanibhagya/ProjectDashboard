@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface ISpecRepository
-    {
-        int getSpecLevel(string projectIdToSpec);
+  public interface ISpecRepository
+  {
+    int getSpecLevel(string projectIdToSpec);
 
-        int getSpecProjectId(string projectCode);
-    }
+    int getSpecProjectId(string projectCode);
+  }
 }

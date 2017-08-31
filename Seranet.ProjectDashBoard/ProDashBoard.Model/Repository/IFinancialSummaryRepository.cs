@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IFinancialSummaryRepository
-    {
-        void add(FinancialSummary summary);
+  public interface IFinancialSummaryRepository
+  {
+    void add(FinancialSummary summary);
 
-        FinancialSummary getSelectedMonthSummary(int year,int accountId,int quarter);
-        int updatesummary(FinancialSummary summary);
-        List<FinancialSummary> getSummaryDataForChart(int accountId, int year, int quarter);
-    }
+    FinancialSummary getSelectedMonthSummary(int year,int accountId,int quarter);
+    int updatesummary(FinancialSummary summary);
+    List<FinancialSummary> getSummaryDataForChart(int accountId, int year, int quarter);
+  }
 }

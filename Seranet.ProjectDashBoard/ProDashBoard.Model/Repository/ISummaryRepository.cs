@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface ISummaryRepository
-    {
+  public interface ISummaryRepository
+  {
 
-        List<Summary> Get();
-        List<Summary> getSelectedProjectSummaries(int projectId);
+    List<Summary> Get();
+    List<Summary> getSelectedProjectSummaries(int projectId);
 
-        Summary getLatestProjectSummary(int projectId, int year, int quarter);
+    Summary getLatestProjectSummary(int projectId, int year, int quarter);
 
-        int updateSelectedSummary(int accountId, int year, int quarter, double rating);
+    int updateSelectedSummary(int accountId, int year, int quarter, double rating);
 
 
 
-    }
+  }
 }

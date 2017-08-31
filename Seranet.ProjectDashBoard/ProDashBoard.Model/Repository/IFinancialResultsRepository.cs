@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IFinancialResultsRepository
-    {
-        int add(List<FinancialExpandedResults> results);
+  public interface IFinancialResultsRepository
+  {
+    int add(List<FinancialExpandedResults> results);
 
-    List<List<FinancialExpandedResults>> getSelectedFinancialResults(int year, int quarter, int accountId);
+  List<List<FinancialExpandedResults>> getSelectedFinancialResults(int year, int quarter, int accountId);
 
-    int getEmployeeTimeReportMaxMonth(int accountId, int year, int quarter, int empId);
+  int getEmployeeTimeReportMaxMonth(int accountId, int year, int quarter, int empId);
 
-    FinancialExpandedResults getIndividualEmpDataForLastMonthInQuarter(int accountId, int empId, int year, int quarter);
+  FinancialExpandedResults getIndividualEmpDataForLastMonthInQuarter(int accountId, int empId, int year, int quarter);
 
-    }
+  }
 }

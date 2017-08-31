@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IQuestionRepository
-    {
-        List<Questions> Get();
+  public interface IQuestionRepository
+  {
+    List<Questions> Get();
 
-        List<Questions> getDisplayingQuestions(int availability);
-        Questions Get(int id);
+    List<Questions> getDisplayingQuestions(int availability);
+    Questions Get(int id);
 
         
-    }
+  }
 }

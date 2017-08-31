@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IAccountRepository
-    {
-        List<Account> Get();
-        Account Get(int id);
+  public interface IAccountRepository
+  {
+    List<Account> Get();
+    Account Get(int id);
 
-        Spec GetSpec(int accountId);
-        List<Object[]> getAllAccounts();
-        List<Account> getInactiveAccounts();
-        int add(Account account);
+    Spec GetSpec(int accountId);
+    List<Object[]> getAllAccounts();
+    List<Account> getInactiveAccounts();
+    int add(Account account);
 
-        int update(Account account);
-        Account Get(string code);
-    }
+    int update(Account account);
+    Account Get(string code);
+  }
 }

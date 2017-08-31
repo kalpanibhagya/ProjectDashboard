@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface ICustomerSatSummaryRepository
-    {
-        List<CustomerSatSummary> Get();
-        List<List<CustomerSatSummary>> getSelectedAccountSummaries(int AccountId);
+  public interface ICustomerSatSummaryRepository
+  {
+    List<CustomerSatSummary> Get();
+    List<List<CustomerSatSummary>> getSelectedAccountSummaries(int AccountId);
 
-        CustomerSatSummary getSelectedProjectSummary(int AccountId,int ProjectId,int year,int quarter);
-        Object[] getCustomerSatisfactionWidgetDetails(int AccountId);
+    CustomerSatSummary getSelectedProjectSummary(int AccountId,int ProjectId,int year,int quarter);
+    Object[] getCustomerSatisfactionWidgetDetails(int AccountId);
 
-    }
+  }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ProDashBoard.Model.Repository
 {
-    public interface IEmailSenderRepository
-    {
-        bool sendTeamSatisfactionSurveyEmails(SurveyEmail surveyEmailData);
-        bool SendEmail(string recipient, string subject, string body);
-    }
+  public interface IEmailSenderRepository
+  {
+    bool sendTeamSatisfactionSurveyEmails(SurveyEmail surveyEmailData);
+    bool SendEmail(string recipient, string subject, string body);
+  }
 }
