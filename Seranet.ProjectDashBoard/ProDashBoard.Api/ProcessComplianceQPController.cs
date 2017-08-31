@@ -9,29 +9,29 @@ using System.Web.Http;
 
 namespace ProDashBoard.Api
 {
-    public class ProcessComplianceQPController : ApiController
+  public class ProcessComplianceQPController : ApiController
+  {
+    private ProcessComplianceQPRepository repo;
+    private AuthorizationRepository authRepo;
+
+    public ProcessComplianceQPController()
     {
-        private ProcessComplianceQPRepository repo;
-        private AuthorizationRepository authRepo;
-
-        public ProcessComplianceQPController()
-        {
-            repo = new ProcessComplianceQPRepository();
-            authRepo = new AuthorizationRepository();
-        }
-
-        [HttpGet, Route("api/ProcessCompliance/getQualityParameters")]
-        public HttpResponseMessage getQualityParameters()
-        {
-            if (authRepo.getAdminRights())
-            {
-                return Request.CreateResponse(HttpStatusCode.OK, repo.get());
-            }
-            else {
-                return Request.CreateResponse(HttpStatusCode.Forbidden, "Unauthorized action. Access denied");
-            }
-            
-        }
-
+      repo = new ProcessComplianceQPRepository();
+      authRepo = new AuthorizationRepository();
     }
+
+    [HttpGet, Route("api/ProcessCompliance/getQualityParameters")]
+    public HttpResponseMessage getQualityParameters()
+    {
+      if (authRepo.getAdminRights())
+      {
+        return Request.CreateResponse(HttpStatusCode.OK, repo.get());
+      }
+      else {
+        return Request.CreateResponse(HttpStatusCode.Forbidden, "Unauthorized action. Access denied");
+      }
+            
+    }
+
+  }
 }
