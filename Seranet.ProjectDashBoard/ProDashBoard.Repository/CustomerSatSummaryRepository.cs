@@ -19,12 +19,12 @@ namespace ProDashBoard.Data
 
     public CustomerSatSummaryRepository()
     {
-        projectRepo = new ProjectRepository();
-        _db = new SqlConnection(ConfigurationManager.ConnectionStrings["DashBoard1"].ConnectionString);
+      projectRepo = new ProjectRepository();
+      _db = new SqlConnection(ConfigurationManager.ConnectionStrings["DashBoard1"].ConnectionString);
     }
     public List<CustomerSatSummary> Get()
     {
-        return null;
+      return null;
     }
 
     public List<List<CustomerSatSummary>> getSelectedAccountSummaries(int accountId)
